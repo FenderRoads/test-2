@@ -1,14 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  $('.input').on('input', function(){
+  if ($('.input').val() !== '') {
+    $('.input').addClass('input-filled');
+  } 
+
+  $('.input').on('input', function() {
     var $this = $(this);
     if ($this.val() == '') {
-        $this.removeClass('input-filled');
+      $this.removeClass('input-filled');
     } else {
-        $this.addClass('input-filled');
+      $this.addClass('input-filled');
     }
   });
 
+  
   $(".nav-item-info").click(function() {
     scrollTo("#info")
   });
