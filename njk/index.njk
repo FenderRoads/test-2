@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Главная</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<meta name="theme-color" content="#000">
+	<link rel="stylesheet" href="libs/fontawesome/fontawesome.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+	
+	<div class="header">
+		<div class="container">
+			<div class="nav">
+				<div class="nav-item-info">Личная информация</div>
+				<div class="nav-item-exp">Опыт</div>
+				<div class="nav-item-js">JavaScript</div>
+				<div class="nav-item-aboutme">О себе</div>
+			</div>
+			<div class="hamburger">
+				<div class="hamburger-inner"></div>
+			</div>
+			<div class="hamburger-menu">
+				<div class="hamburger-menu__item nav-item-info">Личная информация</div>
+				<div class="hamburger-menu__item nav-item-exp">Опыт</div>
+				<div class="hamburger-menu__item nav-item-js">JavaScript</div>
+				<div class="hamburger-menu__item nav-item-aboutme">О себе</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="bg-mountains"><img src="img/@2x/bg-mountain-new.jpg" alt=""></div>
+		<div class="container">
+			<div class="main-title">Анкета</div>
+			<div class="block-info" id="info">
+				<div class="block-info__icon"><img src="img/@2x/icon-info.svg" alt=""></div>
+				<div class="block-info__title">Личная информация</div>
+				<div class="form">
+					<div class="input-wrapper">
+						<input type="text" class="input">
+						<span class="input-placeholder">Фио</span>
+					</div>
+					<select class="js-yearofbirth">
+						<option value="">Год рождения</option>
+						<option value="">2004</option>
+						<option value="">2003</option>
+						<option value="">2002</option>
+						<option value="">2001</option>
+						<option value="">2000</option>
+						<option value="">1999</option>
+						<option value="">1998</option>
+						<option value="">1997</option>
+						<option value="">1996</option>
+						<option value="">1995</option>
+						<option value="">1994</option>
+						<option value="">1993</option>
+						<option value="">1992</option>
+						<option value="">1991</option>
+					</select>
+					<div class="input-wrapper">
+						<input type="text" class="input">
+						<span class="input-placeholder">Место проживания</span>
+					</div>
+					<div class="input-wrapper">
+						<input type="text" class="input">
+						<span class="input-placeholder">Skype</span>
+					</div>
+					<div class="input-wrapper">
+						<input type="email" class="input">
+						<span class="input-placeholder">E-mail</span>
+					</div>
+				</div>
+			</div>
+			<div class="block-exp" id="exp">
+				<div class="block-exp__icon"><img src="img/@2x/icon-exp.svg" alt=""></div>
+				<div class="block-exp__title">Расскажите о своем опыте</div>
+				<div class="block-exp__checkboxes">
+					<label class="b-contain">
+						<span>БЭМ/OOCSS</span>
+						<input type="checkbox">
+						<div class="b-input"></div>
+					</label>
+					<label class="b-contain">
+						<span>Stylus/LESS/SASS</span>
+						<input type="checkbox">
+						<div class="b-input"></div>
+					</label>
+					<label class="b-contain">
+						<span>Работаю с SVG</span>
+						<input type="checkbox">
+						<div class="b-input"></div>
+					</label>
+					<label class="b-contain">
+						<span>Верстаю семантично</span>
+						<input type="checkbox">
+						<div class="b-input"></div>
+					</label>
+					<label class="b-contain">
+						<span>ES2015/ES2016</span>
+						<input type="checkbox">
+						<div class="b-input"></div>
+					</label>
+					<label class="b-contain">
+						<span>Gulp/GRUNT</span>
+						<input type="checkbox">
+						<div class="b-input"></div>
+					</label>
+					<label class="b-contain">
+						<span>Webpack</span>
+						<input type="checkbox">
+						<div class="b-input"></div>
+					</label>
+					<label class="b-contain">
+						<span>jQuery</span>
+						<input type="checkbox">
+						<div class="b-input"></div>
+					</label>
+					<label class="b-contain">
+						<span>Иcпользую Git</span>
+						<input type="checkbox">
+						<div class="b-input"></div>
+					</label>
+				</div>
+			</div>
+			<div class="block-js" id="js">
+				<div class="block-js__icon"><img src="img/@2x/icon-js.svg" alt=""></div>
+				<div class="block-js__title">Уровень владения JavaScript</div>
+				<div class="block-js__range">
+					<div class="range-values">
+						<span>Не владею</span>
+						<span>Использую готовые решения</span>
+						<span>Использую готовые решения и умею и переделывать</span>
+						<span>Пишу сложный JS с нуля</span>
+					</div>
+					<input type="text" class="js-range-slider" name="my_range" value="" />
+				</div>
+			</div>
+			<div class="block-aboutme" id="aboutme">
+				<div class="block-aboutme__icon"><img src="img/@2x/icon-me.svg" alt=""></div>
+				<div class="block-aboutme__title">Расскажите о себе</div>
+				<div class="block-aboutme__post-title">Напишите несколько предложений, чем привлекла наша вакансия
+				и что вы ожидаете от работы у нас.
+				</div>
+					<textarea class="block-aboutme__textarea" placeholder="Понравилась тем, что ..."></textarea>
+			</div>
+
+			<div class="button-success-wrapper">
+				<div class="button-success">Готово</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="js/scripts.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

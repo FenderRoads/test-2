@@ -1,0 +1,499 @@
+@import "_fonts.sass"
+@import "_vars.sass"
+@import "_libs.sass"
+@import "_modules.sass"
+
+*
+	padding: 0
+	margin: 0
+	outline: none
+
+
+::placeholder
+	color: #666
+
+.normal-satate 
+  transform: skew(-16deg) scale(1) !important
+  opacity: 1 !important
+
+.container
+	width: 768px
+	padding-left: 15px
+	padding-right: 15px
+	margin: 0 auto
+	position: relative
+	
+img
+	image-rendering: -webkit-optimize-contrast 
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	font-size: 100%
+
+a
+	color: #fff
+	text-decoration: none
+	&:visited, &:active
+		color: inherit
+
+.h1, .h2, .h3, .h4, .h5, .h6
+	text-transform: uppercase
+	line-height: 1.4
+
+li
+	list-style: none
+
+.text-center
+	text-align: center
+	
+body
+	font-size: 16px
+	min-width: 320px
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+b, strong
+	font-weight: bold
+    
+	
+// Default Styles
+
+.header
+	height: 85px
+	display: flex
+	align-items: center
+	.hamburger
+		cursor: pointer
+		display: none
+		position: absolute
+		top: -22px
+		right: 12px
+	.hamburger-inner
+		width: 27px
+		height: 2px
+		background: #000
+		position: relative
+		margin-top: 20px
+		cursor: pointer
+		&:after, &:before
+			content: ''
+			width: 27px
+			height: 2px
+			background: #000
+			position: absolute
+		&:after
+			top: -8px
+		&:before
+			bottom: -8px
+	.hamburger-menu
+		position: absolute
+		right: 12px
+		top: 25px
+		background: #fff
+		border-raduis: 5px
+		box-shadow: 0px 0px 10px rgba(#000, .2)
+		display: none
+		z-index: 100
+	.hamburger-menu-active
+		display: block
+		animation: zoomIn .5s ease
+	.hamburger-menu__item
+		text-align: center
+		padding: 6px 15px
+		color: $blue
+		transition: all .25s ease
+		&:hover
+			color: #000000
+			transition: all .25s ease
+
+	.nav
+		display: flex
+		justify-content: space-between
+		width: 65%
+		margin: 0 auto
+		div
+			font-weight: 300
+			color: $blue
+			font-size: 14px
+			transition: all .25s ease
+			cursor: pointer
+			&:hover
+				color: #000000
+				transition: all .25s ease
+			
+
+
+
+.main
+	position: relative
+	.bg-mountains
+		position: absolute
+		top: 0
+		text-align: center
+		z-index: -1
+		right: 0
+		left: 0
+		margin: auto
+		img
+			width: 1170px
+			text-align: center
+		&:after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 71%	
+			bottom: 0
+			left: 0
+			right: 0
+			margin: auto
+			background: #fff
+			box-shadow: 0 0px 50px 110px rgba(#fff, 1)
+		
+	.main-title
+		color: #000000
+		+font("RobotoThin", 100, 70px)
+		padding-top: 97px
+		text-align: center
+	.block-info
+		padding-top: 41px
+	.block-info__icon
+		text-align: center
+	.block-info__title
+		color: #1c1c1c
+		font-size: 27px
+		font-weight: 200
+		text-align: center
+		padding-top: 20px
+		letter-spacing: 1px
+	.form
+		padding-top: 30px
+		display: flex
+		flex-direction: column
+		width: 520px
+		margin: 0 auto
+		.input
+			box-sizing: border-box
+			border: none
+			border-radius: 5px
+			background: none
+			width: 100%
+			padding: 22px 15px 12px
+			position: relative
+			z-index: 5
+			border: 1px solid #e5e5e5
+			transition: border .25s ease
+			font-size: 20px
+			color: #000
+			text-align: center
+			&:focus
+				border: 1px solid $blue
+				transition: border .25s ease 
+		.input-wrapper
+			position: relative
+			box-sizing: border-box
+			width: 100%
+			font-size: 16px
+			margin: 14px 0px
+			&:first-child
+				.input-placeholder
+					text-transform: uppercase
+		.input-placeholder
+			box-sizing: border-box
+			border: none
+			background: none
+			width: 100%
+			position: absolute
+			z-index: 1
+			left: 0
+			top: 50%
+			margin-top: -20px
+			color: #c8c8c8
+			transition: all .2s ease
+			text-align: center
+			font-size: 24px
+	.input-filled + .input-placeholder,
+	.input:focus + .input-placeholder
+		font-size: 0.8em
+		top: 0
+		margin-top: 0.1em
+
+	.select2-container
+		width: 320px
+		z-index: 15
+		margin: 10px auto
+	.select2-container--default .select2-selection--single .select2-selection__arrow b
+		border: 1px solid $blue
+		border-width: 0 2px 2px 0
+		display: inline-block
+		padding: 3px
+		transform: rotate(45deg)
+		transition: transform .25s ease
+		position: absolute
+		top: 23px
+		right: 20px
+	.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+		transform: rotate(-135deg);
+		top: 27px
+		transition: all .25s ease
+	.select2-container .select2-selection--single
+		height: 60px
+	.select2-container--default .select2-selection--single .select2-selection__rendered
+		line-height: 56px
+		text-align: center
+		color: $grey
+		font-size: 24px
+	.select2-container--default .select2-selection--single
+		border: 1px solid $light-grey
+	.select2-container .select2-selection--single .select2-selection__rendered
+		padding: 0
+
+
+	.block-exp
+		padding-top: 60px
+	.block-exp__icon
+		text-align: center
+	.block-exp__title
+		@extend .block-info__title
+	.block-exp__checkboxes
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		height: 102px
+		padding-top: 42px
+		.b-input
+			color: #000
+
+
+	.block-js
+		padding-top: 123px
+	.block-js__icon
+		text-align: center
+	.block-js__title
+		@extend .block-info__title
+	.block-js__range
+		padding-top: 65px
+		position: relative
+		.irs-handle
+			position: relative
+			z-index: 20
+			img
+				position: absolute
+				bottom: -15px
+				left: -4px
+				cursor: pointer
+		.irs-min, .irs-max
+			visibility: hidden !important
+		.irs-single
+			visibility: hidden !important
+		.irs-grid-pol.small, .irs-grid-pol
+			display: none
+		.range-values
+			position: absolute
+			top: 40px
+			left: 0
+			color: #000
+			display: flex
+			line-height: 1.3
+			span
+				display: inline-block
+				font-size: 13px
+				position: relative
+				color: #2e211c
+				&:first-child
+					width: 70px
+					margin-top: 15px
+					&:after
+						height: 25px
+					&:before
+						display: none
+				&:nth-child(2)
+					width: 125px
+					margin-left: 125px
+					&:after
+						height: 22px
+				&:nth-child(3)
+					width: 190px
+					margin-left: 63px
+					&:after
+						height: 20px
+						bottom: -22px
+					&:before
+						height: 9px
+				&:last-child
+					margin-top: 15px
+					margin-left: 41px
+					&:after
+						left: auto
+						right: 0
+						height: 20px
+						bottom: -19px
+					&:before
+						display: none
+				&:after
+					content: ''
+					position: absolute
+					height: 40px
+					border-left: 1px dotted #000000
+					width: 1px
+					left: 0
+					bottom: -25px
+					z-index: 20
+				&:before
+					content: ''
+					position: absolute
+					height: 7px
+					width: 2px
+					background: #fff
+					bottom: -35px
+					left: 0
+					z-index: 20
+				
+		.irs-line
+			border-radius: 0px
+			height: 17px
+		.irs--flat .irs-bar
+			background: linear-gradient(to right, #ccb1f1 0%, #435993 100%)
+			height: 17px
+			z-index: 4
+			&:after
+				content: ''
+				position: absolute
+				top: -6px
+				transform: rotate(-0.7deg)
+				left: 0
+				height: 14px
+				width: 772px
+				background: #ffffff
+				z-index: 5
+
+		.irs-grid-text
+			visibility: visible !important
+			white-space: normal
+			bottom: 75px
+			font-size: 16px
+			text-align: left
+			line-height: 1.4
+			width: 220px
+			margin-left: 0 !important
+			&:after
+				content: ''
+				height: 35px
+				border-left: 1px dotted #000
+				width: 2px
+				position: absolute
+				left: 37px
+				bottom: -36px
+
+
+
+
+
+
+	.block-aboutme
+		padding-top: 100px
+	.block-aboutme__icon
+		text-align: center
+	.block-aboutme__title
+		@extend .block-info__title
+	.block-aboutme__post-title
+		color: #1c1c1c
+		font-weight: 300
+		padding-top: 7px
+		text-align: center
+		width: 500px
+		margin: 0 auto
+		font-size: 15.5px
+	.block-aboutme__textarea
+		margin-top: 60px
+		width: 480px
+		margin: 30px auto 0
+		display: block
+		height: 140px
+		resize: none
+		background: none 
+		border: 1px solid $light-grey
+		padding: 20px
+		font-size: 20px
+		transition: border .25s ease
+		position: relative
+		+font1('RobotoRegular', 400)
+		border-radius: 5px
+		&:focus
+			border: 1px solid $blue
+			transition: border .25s ease 
+		&::placeholder
+			color: #c8c8c8
+			font-size: 20px
+			+font1('RobotoRegular', 400)
+
+
+	.button-success-wrapper
+		padding: 70px 0px
+	.button-success
+		text-align: center
+		background: $blue
+		padding: 11px 0px
+		margin: 0 auto
+		width: 115px
+		color: #fff
+		border-radius: 9px
+		cursor: pointer
+		font-weight: 200
+		+font1("RobotoLight", 200)
+
+
+
+.yearofbirth-inner.select2-dropdown
+	border: none
+	box-shadow: 0px 0px 5px 2px rgba(#000, .2)
+	z-index: 5
+	color: $blue
+	margin-top: 1px
+.select2-container--default .select2-results > .select2-results__options
+	min-height: 300px
+	text-align: center
+	font-size: 20px
+	+font1("RobotoLight", 200)
+.select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar
+	display: none
+.select2-container--default .select2-results > .select2-results__options
+	scrollbar-width: none
+.select2-container--default .select2-results > .select2-results__options
+	-ms-overflow-style: none;
+.select2-results
+	padding: 25px 0px
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+	background-color: transparent
+	color: $blue
+.select2-container--default .select2-results__option[aria-selected=true]
+	background-color: transparent
+		
+
+@-moz-document url-prefix()
+	.main .block-js__range .range-values span:before
+		height: 8px
+	.main .block-js__range .range-values span:nth-child(3):before
+		height: 10px
+	.main .block-exp__checkboxes
+		height: 105px
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+	.main .block-exp__checkboxes
+		height: 105px
+@import "_media"

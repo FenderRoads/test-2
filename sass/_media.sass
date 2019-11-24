@@ -1,0 +1,82 @@
+@import "vars"
+
+@media only screen and (max-width: 1170px)
+  .main
+    .bg-mountains
+      img
+        width: 768px
+      &:after
+        height: 55%
+
+@media only screen and (max-width: 768px)
+  .container
+    width: 290px
+  .header
+    .hamburger
+      display: block
+    .nav
+      display: none
+  .main
+    .bg-mountains
+      img
+        width: 320px
+      &:after
+        height: 0%
+    .form
+      width: 290px
+    .select2-container
+      width: 290px
+    .block-exp__checkboxes
+      height: auto
+      .b-contain
+        margin-left: 66px
+      .b-contain:first-child, .b-contain:nth-child(2), .b-contain:nth-child(3)
+        margin-right: 0px
+        margin-left: 66px
+    
+
+    .block-js__range
+      .range-values
+        span
+          font-size: 11px
+          &:first-child
+            &:after
+              bottom: 72px
+          &:nth-child(2)
+            margin-left: 0px
+            margin-top: 100px
+            &:after
+              bottom: 32px
+              height: 26px
+              left: 15px
+            &:before
+              bottom: 61px
+              left: 15px
+          &:nth-child(3)
+            margin-left: -38px
+            &:after
+              height: 25px
+              bottom: 72px
+              left: 16px
+            &:before
+              bottom: 61px
+              left: 16px
+          &:last-child
+            margin-top: 100px
+            margin-left: -110px
+            &:after
+              height: 27px
+              bottom: 28px
+
+    .block-aboutme__post-title
+      width: 100%
+    .block-aboutme__textarea
+      width: 100%
+      box-sizing: border-box
+    .block-js__range .irs--flat .irs-bar:after
+      width: 290px
+      transform: rotate(-1.5deg)
+    
+      
+
+    
