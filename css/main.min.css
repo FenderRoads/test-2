@@ -6256,6 +6256,7 @@ b, strong {
     width: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    height: 320px;
   }
   .main .block-js__range .irs--flat .irs-bar:after {
     width: 290px;
